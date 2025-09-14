@@ -1,0 +1,20 @@
+flowchart TD
+    Start[Operação de Escrita 27C256] --> Step1[PASSO 1: Converter endereço para binário]
+    Step1 --> Step2[PASSO 2: Configurar pinos de endereço A0-A14]
+    Step2 --> Step3[PASSO 3: Configurar pinos de dados D0-D7]
+    Step3 --> Step4[PASSO 4: Configurar pinos de controle]
+
+    subgraph Step4Details [Configuração dos Pinos de Controle]
+        CE[CE Chip Enable: LOW 0V]
+        OE[OE Output Enable: HIGH 5V]
+        VPP_WE[VPP/WE: Aguardando pulso LOW para gravação]
+    end
+
+    Step4 --> Step4Details
+    Step4Details --> Step5[PASSO 5: Aplicar pulso LOW em VPP/WE]
+    Step5 --> Step6[PASSO 6: Aguardar 100ns]
+    Step6 --> Done[Escrita concluída!]
+
+    style Start fill:#2a2b2e
+    style Done fill:#2a2b2e
+    style Step4Details fill:#2a2b2e
