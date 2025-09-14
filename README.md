@@ -1,5 +1,6 @@
 # 27C256 – Guia de Endereçamento e Escrita
 #
+Documentação ilustrada e didática sobre o funcionamento, endereçamento e procedimentos de escrita/leitura da memória EPROM 27C256. Inclui diagramas, exemplos de pinagem, tabelas de sinais e passo a passo para gravação de dados.
 ## Exemplo de Pinagem do 27C256
 
 ```
